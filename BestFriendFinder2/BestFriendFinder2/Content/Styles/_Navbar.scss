@@ -1,7 +1,34 @@
 ﻿@import "_Variables.scss";
 
 .navbar{
-    .header{
+    background-color: $primary-green;
+    .navbar-header{
         background-color: $primary-green;
+    }
+    .navbar-logo{
+        margin: 5px 40px 5px 0px;
+        height: 45px; 
+        width: auto;
+        right: 40px;
+    }
+    .navbar-nav li a{
+        color: white;
+        padding-bottom: 20px;
+    }
+    .navbar-brand{
+        color: white;
+    }
+    .navbar-right{
+        color:white;
+    }
+    .navbar-left{
+        color: white;
+    }
+    .navbar-links ul li a{
+        color: white;    
+        &:hover{
+            background-color: #13997e;
+            padding-bottom: -5px;
+        }
     }
 }

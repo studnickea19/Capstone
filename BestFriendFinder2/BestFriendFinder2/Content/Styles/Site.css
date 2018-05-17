@@ -5,7 +5,7 @@ body {
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-  font-family: Dosis;
+  font-family: Raleway;
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -28,5 +28,16 @@ h4,
 h5,
 h6 {
   font-family: Dosis; }
+
+.btn-primary {
+  color: #333333;
+  background-color: #A2D9CE;
+  border-color: #cccccc; }
+
+.container .jumbotron {
+  border-radius: 20px; }
+
+.jumbotron {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=Site.css.map */

@@ -79,3 +79,4 @@ C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\bin\Micros
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.dll
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.pdb
+C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.csprojResolveAssemblyReference.cache

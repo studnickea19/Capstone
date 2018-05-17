@@ -26,5 +26,10 @@ namespace BestFriendFinder2.Controllers
 
             return View();
         }
+
+        public ActionResult OurStory()
+        {
+            return View();
+        }
     }
 }

@@ -25,8 +25,8 @@ namespace BestFriendFinder2
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/Styles/Variables.scss",
-                      "~/Content/Styles/_Navbar.scss",
+                      "~/Content/Styles/_Variables.css",
+                      "~/Content/Styles/_Navbar.css",
                       "~/Content/Styles/site.css"));
         }
     }
