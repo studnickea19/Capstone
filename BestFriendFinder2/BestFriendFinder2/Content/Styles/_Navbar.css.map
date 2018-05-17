@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,eAAO;EACH,gBAAgB,ECHR,OAAO",
+"sources": ["_Navbar.scss","_Variables.scss"],
+"names": [],
+"file": "_Navbar.css"
+}
