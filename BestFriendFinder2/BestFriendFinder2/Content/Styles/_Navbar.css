@@ -1,5 +1,7 @@
 .navbar {
   background-color: #17A589; }
+  .navbar a {
+    color: white; }
   .navbar .navbar-header {
     background-color: #17A589; }
   .navbar .navbar-logo {
@@ -12,14 +14,45 @@
     padding-bottom: 20px; }
   .navbar .navbar-brand {
     color: white; }
-  .navbar .navbar-right {
-    color: white; }
-  .navbar .navbar-left {
-    color: white; }
   .navbar .navbar-links ul li a {
     color: white; }
     .navbar .navbar-links ul li a:hover {
       background-color: #13997e;
       padding-bottom: -5px; }
+  .navbar .navbar-links a {
+    color: white;
+    vertical-align: middle;
+    padding-top: 15px; }
+    .navbar .navbar-links a .caret {
+      border-top-color: white;
+      border-bottom-color: white; }
+      .navbar .navbar-links a .caret:hover {
+        color: white; }
+    .navbar .navbar-links a:hover {
+      background-color: #13997e;
+      text-decoration: none; }
+
+.nav .caret {
+  border-top-color: white;
+  border-bottom-color: white; }
+.nav li a {
+  position: relative;
+  display: block;
+  padding: 10px 15px; }
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent; }
+
+.navbar-inverse .navbar-nav .open > a, .navbar-inverse .navbar-nav .open > a:hover, .navbar-inverse .navbar-nav .open > a:focus {
+  color: #ffffff;
+  background-color: #13997e; }
+.navbar-inverse .navbar-nav .dropdown a .caret {
+  border-top-color: white;
+  border-bottom-color: white; }
+.navbar-inverse .navbar-nav .dropdown-menu {
+  background-color: #13997e; }
+  .navbar-inverse .navbar-nav .dropdown-menu li a:hover {
+    background-color: #A2D9CE; }
 
 /*# sourceMappingURL=_Navbar.css.map */

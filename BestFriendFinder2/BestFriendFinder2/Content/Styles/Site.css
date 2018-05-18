@@ -39,5 +39,15 @@ h6 {
 
 .jumbotron {
   margin-top: 30px; }
+  .jumbotron img .jumbotron-logo {
+    float: right;
+    height: 90%; }
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 80%; }
+  iframe .googlemap {
+    justify-content: center; }
 
 /*# sourceMappingURL=Site.css.map */

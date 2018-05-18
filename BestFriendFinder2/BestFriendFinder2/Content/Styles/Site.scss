@@ -48,4 +48,17 @@ h6,
 }
 .jumbotron{
     margin-top:30px;
+    img .jumbotron-logo{
+        float: right;
+        height: 90%
+    }
+}
+
+iframe{
+    .googlemap{
+    justify-content:center;
+    }
+    border: none;
+    width: 100%;
+    height: 80%;
 }

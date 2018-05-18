@@ -2,6 +2,9 @@
 
 .navbar{
     background-color: $primary-green;
+    a{
+        color: white;
+    }
     .navbar-header{
         background-color: $primary-green;
     }
@@ -18,17 +21,71 @@
     .navbar-brand{
         color: white;
     }
-    .navbar-right{
-        color:white;
-    }
-    .navbar-left{
-        color: white;
-    }
     .navbar-links ul li a{
-        color: white;    
+        color: white;  
+          
         &:hover{
-            background-color: #13997e;
+            background-color: $hover-green;
             padding-bottom: -5px;
+            }
         }
+     .navbar-links a{
+        color: white;
+        vertical-align: middle;
+        padding-top: 15px;
+        .caret{
+        border-top-color: white;
+        border-bottom-color:white;
+        &:hover{
+            color: white;
+        }
+
+    }    
+        &:hover{
+            background-color: $hover-green;
+            text-decoration: none;
+        }
+
+    }
+}
+
+.nav {
+    .caret{
+    border-top-color: white;
+    border-bottom-color: white;
+    }
+    li a{
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    }
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.navbar-inverse{
+    .navbar-nav {
+        .open > a, .open > a:hover, .open > a:focus {
+        color: #ffffff;
+        background-color: $hover-green;
+        } 
+        .dropdown {
+            a .caret{
+            border-top-color: white;
+            border-bottom-color:white;
+            }            
+        }
+        .dropdown-menu{
+        background-color: $hover-green;
+        li a{
+            &:hover{
+            background-color:$secondary-green;
+                }
+            }
+        }
+        
     }
 }

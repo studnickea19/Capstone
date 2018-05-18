@@ -29,5 +29,7 @@ namespace BestFriendFinder2.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Service> Service { get; set; }
     }
 }
