@@ -5,30 +5,25 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 svc-home">
+            <h2>Train for life</h2>
+            <p>
+                There are no bad dogs, only poorly trained ones.
+            </p>
+            <p><a class="btn btn-default" href="/Services/Training">Training Services &raquo;</a></p>
+        </div>
+        <div class="col-md-3 svc-home">
+            <h2>Exercise Daily</h2>
+            <p>Find a local walking service to keep your best friend fit.</p>
+            <p><a class="btn btn-default" href="/Services/Walking">Walking Services &raquo;</a></p>
+        </div>
+        <div class="col-md-3 svc-home">
+            <h2>Look Good</h2>
+            <p>Keep your pet looking fresh - find local groomers.</p>
+            <p><a class="btn btn-default" href="/Services">Grooming Services &raquo;</a></p>
+        </div>
+    </div>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
-
-</table>

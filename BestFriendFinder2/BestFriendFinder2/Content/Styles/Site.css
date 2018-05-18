@@ -52,4 +52,9 @@ iframe {
   iframe .googlemap {
     justify-content: center; }
 
+.container .row .svc-home {
+  margin: 10px;
+  border-radius: 6px;
+  background-color: #efefef; }
+
 /*# sourceMappingURL=Site.css.map */

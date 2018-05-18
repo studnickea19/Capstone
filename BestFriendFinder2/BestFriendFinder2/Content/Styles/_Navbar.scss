@@ -68,10 +68,16 @@ li {
 
 .navbar-inverse{
     .navbar-nav {
-        .open > a, .open > a:hover, .open > a:focus {
-        color: #ffffff;
-        background-color: $hover-green;
-        } 
+        .open{
+            a,  a:hover,  a:focus {
+            color: #ffffff;
+            background-color: $hover-green;
+            } 
+            .dropdown-menu li a{
+                color: white;
+            }
+        }
+         
         .dropdown {
             a .caret{
             border-top-color: white;
