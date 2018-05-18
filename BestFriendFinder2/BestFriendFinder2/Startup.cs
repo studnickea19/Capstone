@@ -59,7 +59,7 @@ namespace BestFriendFinder2
             }
 
             // creating Creating Employee role    
-            if (!roleManager.RoleExists("HumaneSociety"))
+            if (!roleManager.RoleExists("Humane Society"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
                 role.Name = "HumaneSociety";

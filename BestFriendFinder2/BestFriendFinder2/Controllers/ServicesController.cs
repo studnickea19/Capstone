@@ -14,6 +14,12 @@ namespace BestFriendFinder2.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        //GET: Adoption Locations
+        public ActionResult Adopt()
+        {
+            return View();
+        }
+
         //GET: Grooming Locations
         public ActionResult Grooming()
         {

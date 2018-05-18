@@ -313,6 +313,7 @@
     <Content Include="Views\Services\Index.cshtml" />
     <Content Include="Views\Services\Grooming.cshtml" />
     <Content Include="Views\Services\Walking.cshtml" />
+    <Content Include="Views\Services\Adopt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
