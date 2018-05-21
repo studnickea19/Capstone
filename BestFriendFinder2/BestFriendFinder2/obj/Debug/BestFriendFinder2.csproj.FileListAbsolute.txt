@@ -79,7 +79,7 @@ C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\bin\Micros
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.dll
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.pdb
-C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.csprojResolveAssemblyReference.cache
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.Migrations.InitialCreate.resources
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.csproj.GenerateResource.Cache
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.Migrations.Initial.resources
+C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.csprojResolveAssemblyReference.cache

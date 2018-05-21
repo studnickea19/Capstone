@@ -62,7 +62,7 @@ namespace BestFriendFinder2
             if (!roleManager.RoleExists("Humane Society"))
             {
                 var role = new Microsoft.AspNet.Identity.EntityFramework.IdentityRole();
-                role.Name = "HumaneSociety";
+                role.Name = "Humane Society";
                 roleManager.Create(role);
 
             }
