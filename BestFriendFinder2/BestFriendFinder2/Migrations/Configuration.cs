@@ -10,7 +10,6 @@ namespace BestFriendFinder2.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "BestFriendFinder2.Models.ApplicationDbContext";
         }
 
         protected override void Seed(BestFriendFinder2.Models.ApplicationDbContext context)

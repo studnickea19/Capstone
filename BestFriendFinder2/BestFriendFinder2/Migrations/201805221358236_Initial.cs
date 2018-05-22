@@ -3,10 +3,81 @@ namespace BestFriendFinder2.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class InitialCreate : DbMigration
+    public partial class Initial : DbMigration
     {
         public override void Up()
         {
+            CreateTable(
+                "dbo.Animals",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Breed = c.String(),
+                        Neutered = c.Boolean(nullable: false),
+                        Age = c.Int(nullable: false),
+                        HumaneSocietyID = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.HumaneSocieties", t => t.HumaneSocietyID, cascadeDelete: true)
+                .Index(t => t.HumaneSocietyID);
+            
+            CreateTable(
+                "dbo.HumaneSocieties",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        StreetAddress = c.String(),
+                        City = c.String(),
+                        State = c.String(),
+                        Zipcode = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Answers",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        AnswerContent = c.String(),
+                        QuestionId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Questions", t => t.QuestionId, cascadeDelete: true)
+                .Index(t => t.QuestionId);
+            
+            CreateTable(
+                "dbo.Questions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        QuestionContent = c.String(),
+                        OptionOne = c.String(),
+                        OptionTwo = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Breeds",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.Customers",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
+                        LastName = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
             CreateTable(
                 "dbo.AspNetRoles",
                 c => new
@@ -29,6 +100,15 @@ namespace BestFriendFinder2.Migrations
                 .ForeignKey("dbo.AspNetUsers", t => t.UserId, cascadeDelete: true)
                 .Index(t => t.UserId)
                 .Index(t => t.RoleId);
+            
+            CreateTable(
+                "dbo.Services",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -83,17 +163,28 @@ namespace BestFriendFinder2.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
+            DropForeignKey("dbo.Answers", "QuestionId", "dbo.Questions");
+            DropForeignKey("dbo.Animals", "HumaneSocietyID", "dbo.HumaneSocieties");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
+            DropIndex("dbo.Answers", new[] { "QuestionId" });
+            DropIndex("dbo.Animals", new[] { "HumaneSocietyID" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
+            DropTable("dbo.Services");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.Customers");
+            DropTable("dbo.Breeds");
+            DropTable("dbo.Questions");
+            DropTable("dbo.Answers");
+            DropTable("dbo.HumaneSocieties");
+            DropTable("dbo.Animals");
         }
     }
 }

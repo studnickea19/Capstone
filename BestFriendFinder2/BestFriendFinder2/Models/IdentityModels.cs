@@ -31,5 +31,17 @@ namespace BestFriendFinder2.Models
         }
 
         public DbSet<Service> Service { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.Animal> Animals { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.HumaneSociety> HumaneSocieties { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.Answer> Answers { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.Question> Questions { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.Breed> Breeds { get; set; }
+
+        public System.Data.Entity.DbSet<BestFriendFinder2.Models.Customer> Customers { get; set; }
     }
 }
