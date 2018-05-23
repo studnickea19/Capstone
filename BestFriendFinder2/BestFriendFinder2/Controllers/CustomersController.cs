@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BestFriendFinder2.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BestFriendFinder2.Controllers
 {
@@ -14,6 +15,31 @@ namespace BestFriendFinder2.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        
+
+        public ActionResult PostQuiz(List<string> attributes)
+        {
+            //int match = 0;
+            //List<Breed> finalBreeds = new List<Breed>();
+            //var matchBreeds = db.Breeds.ToList();
+            //foreach(Breed breed in matchBreeds)
+            //{
+            //    foreach(string item in attributes)
+            //    {
+            //        if(breed.Attributes.Contains(item))
+            //        {
+            //            match += 1;
+            //        }
+            //    }
+            //    if(match > 3)
+            //    {
+            //        finalBreeds.Add(breed);
+            //        match = 0;
+            //    }
+            //}
+            return View(db.Breeds.ToList());
+        }
+        
         // GET: Customers
         public ActionResult Index()
         {

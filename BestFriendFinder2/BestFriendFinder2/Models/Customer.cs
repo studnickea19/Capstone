@@ -14,5 +14,7 @@ namespace BestFriendFinder2.Models
         public string LastName { get; set; }
 
         public List<string> Attributes { get; set; }
+
+        public string UserID { get; set; }
     }
 }

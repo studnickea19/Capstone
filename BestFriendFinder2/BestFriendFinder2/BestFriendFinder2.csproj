@@ -204,13 +204,31 @@
     <Compile Include="Controllers\HumaneSocietiesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\QuestionsController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201805221358236_Initial.cs" />
     <Compile Include="Migrations\201805221358236_Initial.Designer.cs">
       <DependentUpon>201805221358236_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221905287_UpdatingQuestionModel.cs" />
+    <Compile Include="Migrations\201805221905287_UpdatingQuestionModel.Designer.cs">
+      <DependentUpon>201805221905287_UpdatingQuestionModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221946124_AddedUserIDToCustomer.cs" />
+    <Compile Include="Migrations\201805221946124_AddedUserIDToCustomer.Designer.cs">
+      <DependentUpon>201805221946124_AddedUserIDToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805221953143_AddedAttributesToBreedModel.cs" />
+    <Compile Include="Migrations\201805221953143_AddedAttributesToBreedModel.Designer.cs">
+      <DependentUpon>201805221953143_AddedAttributesToBreedModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805231510052_AddedAttributeToBreed.cs" />
+    <Compile Include="Migrations\201805231510052_AddedAttributeToBreed.Designer.cs">
+      <DependentUpon>201805231510052_AddedAttributeToBreed.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -352,6 +370,10 @@
     <Content Include="Views\Questions\Details.cshtml" />
     <Content Include="Views\Questions\Edit.cshtml" />
     <Content Include="Views\Questions\Index.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
+    <Content Include="Views\Questions\TakeQuiz.cshtml" />
+    <Content Include="Views\Customers\PostQuiz.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -367,6 +389,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201805221358236_Initial.resx">
       <DependentUpon>201805221358236_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221905287_UpdatingQuestionModel.resx">
+      <DependentUpon>201805221905287_UpdatingQuestionModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221946124_AddedUserIDToCustomer.resx">
+      <DependentUpon>201805221946124_AddedUserIDToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805221953143_AddedAttributesToBreedModel.resx">
+      <DependentUpon>201805221953143_AddedAttributesToBreedModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805231510052_AddedAttributeToBreed.resx">
+      <DependentUpon>201805231510052_AddedAttributeToBreed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

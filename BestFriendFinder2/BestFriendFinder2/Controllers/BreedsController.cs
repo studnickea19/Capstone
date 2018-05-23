@@ -46,7 +46,7 @@ namespace BestFriendFinder2.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description")] Breed breed)
+        public ActionResult Create([Bind(Include = "Id,Name,Description,Attributes")] Breed breed)
         {
             if (ModelState.IsValid)
             {

@@ -70,8 +70,17 @@ iframe{
         .svc-home{
             margin: 10px;
             border-radius: 6px;
-            background-color: #efefef;
-            
+            background-color: #efefef;           
+        }
+        input{
+            position: absolute;
+            opacity: 0;
         }
     }
 }
+
+.form-horizontal .form-group{
+margin-right: -15px;
+margin-left: 0px;
+}
+

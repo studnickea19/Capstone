@@ -1,0 +1,41 @@
+﻿@model BestFriendFinder2.Models.Question
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Best Friend Finder Quiz</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @*@foreach (var item in Model)
+        {*@       
+        <div class="form-group">
+            <h4>@Html.DisplayFor(m  => m.QuestionContent, new { @class = "control-label col-md-2" })</h4>
+            <div class="col-md-10">
+                <p>@Html.RadioButtonFor(m => m.Selection, Model.OptionOne, new { htmlAttributes = new { @class = "radio" } }) @Html.DisplayFor(m => m.OptionOne, new { htmlAttributes = new { @class = "form-control" } })</p>
+                
+                <p>@Html.RadioButtonFor(m => m.Selection, Model.OptionTwo, new { htmlAttributes = new { @class = "radio" } }) @Html.DisplayFor(m => m.OptionTwo, new { htmlAttributes = new { @class = "form-control" } })</p>
+                
+                @Html.ValidationMessageFor(m => m.OptionOne, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*}*@   
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@*<h4>@Html.DisplayFor(modelItem => item.QuestionContent)</h4>
+
+<p>@Html.DisplayFor(modelItem => item.OptionOne)</p>
+
+<p>@Html.DisplayFor(modelItem => item.OptionTwo)</p>*@
+

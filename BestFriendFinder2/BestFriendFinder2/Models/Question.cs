@@ -14,5 +14,7 @@ namespace BestFriendFinder2.Models
         public string OptionOne { get; set; }
 
         public string OptionTwo { get; set; }
+
+        public string Selection { get; set; }
     }
 }

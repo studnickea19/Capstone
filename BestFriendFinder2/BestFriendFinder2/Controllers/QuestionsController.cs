@@ -7,12 +7,40 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BestFriendFinder2.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BestFriendFinder2.Controllers
 {
     public class QuestionsController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
+
+        //GET: Questions
+        public ActionResult TakeQuiz()
+        {
+            var quiz = db.Questions.ToList();
+            return View(quiz[0]);
+        }
+
+        [HttpPost]
+        public ActionResult TakeQuiz(Question questions)
+        {
+            List<string> attributes = new List<string>();
+            //foreach (Question item in questions)
+            //{
+            //    attributes.Add(item.Selection);
+            //}
+            if (User.Identity.IsAuthenticated)
+            {
+                string userID = User.Identity.GetUserId();
+                var user = db.Users.Where(u => u.Id == userID).FirstOrDefault();
+                var customer = db.Customers.Where(s => s.UserID == user.Id).FirstOrDefault();
+                customer.Attributes = attributes;
+                db.SaveChanges();
+            }
+            return RedirectToAction("PostQuiz", "Customers", attributes);
+        }
+
 
         // GET: Questions
         public ActionResult Index()

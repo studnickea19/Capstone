@@ -34,10 +34,10 @@ namespace BestFriendFinder2
 
                 //Create Admin User                 
                 var user = new ApplicationUser();
-                user.UserName = "admin";
+                user.UserName = "admin@gmail.com";
                 user.Email = "admin@gmail.com";
 
-                string userPWD = "password";
+                string userPWD = "Hellow0rld!";
 
                 var chkUser = UserManager.Create(user, userPWD);
 
