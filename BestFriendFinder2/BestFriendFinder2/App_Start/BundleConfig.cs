@@ -27,7 +27,7 @@ namespace BestFriendFinder2
                       "~/Content/bootstrap.css",
                       "~/Content/Styles/_Variables.css",
                       "~/Content/Styles/_Navbar.css",
-                      "~/Content/Styles/site.css"));
+                      "~/Content/Styles/Site.css"));
         }
     }
 }

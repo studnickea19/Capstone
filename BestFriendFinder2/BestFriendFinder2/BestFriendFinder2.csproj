@@ -247,11 +247,14 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Styles\Scss1.css">
-      <DependentUpon>_Variables.scss</DependentUpon>
+    <Content Include="Content\Styles\Site.min.css">
+      <DependentUpon>Site.css</DependentUpon>
     </Content>
     <Content Include="Content\Styles\_Navbar.css">
       <DependentUpon>_Navbar.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\_Variables.css">
+      <DependentUpon>_Variables.scss</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -266,14 +269,21 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Styles\_Variables.scss" />
+    <Content Include="Content\Styles\_Variables.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <IgnoreWarnings>False</IgnoreWarnings>
+      <IgnoreErrors>False</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>True</DebugInfo>
+    </Content>
     <Content Include="Content\Styles\_Navbar.scss">
       <Compile>True</Compile>
       <Minify>True</Minify>
       <IgnoreWarnings>False</IgnoreWarnings>
       <IgnoreErrors>False</IgnoreErrors>
       <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
+      <DebugInfo>True</DebugInfo>
     </Content>
     <Content Include="Content\Styles\Site.scss">
       <Compile>True</Compile>
@@ -281,8 +291,12 @@
       <IgnoreWarnings>True</IgnoreWarnings>
       <IgnoreErrors>True</IgnoreErrors>
       <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
+      <DebugInfo>True</DebugInfo>
     </Content>
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

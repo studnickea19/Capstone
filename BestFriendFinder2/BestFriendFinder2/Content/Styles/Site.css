@@ -1,4 +1,4 @@
-body {
+﻿body {
   font-family: Dosis;
   padding-top: 50px;
   padding-bottom: 20px; }
@@ -52,9 +52,26 @@ iframe {
   iframe .googlemap {
     justify-content: center; }
 
+.form-horizontal .form-group {
+  margin-right: -15px;
+  margin-left: 0px; }
+
+a {
+  color: #13997e; }
+  a:hover {
+    color: #13997e; }
+
 .container .row .svc-home {
   margin: 10px;
   border-radius: 6px;
   background-color: #efefef; }
 
-/*# sourceMappingURL=Site.css.map */
+.container .row input {
+  position: absolute; }
+
+input[type="file"] {
+  background-color: #13997e; }
+
+#file-upload {
+  opacity: 0; }
+

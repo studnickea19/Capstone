@@ -32,7 +32,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6
 {
     font-family: $brand-font;
 }
@@ -65,6 +65,18 @@ iframe{
     padding-top: 30px;
 }
 
+.form-horizontal .form-group{
+margin-right: -15px;
+margin-left: 0px;
+}
+
+a{
+    color: $hover-green;
+    &:hover{
+        color: $hover-green;
+    }
+}
+
 .container {
     .row{
         .svc-home{
@@ -74,13 +86,18 @@ iframe{
         }
         input{
             position: absolute;
-            opacity: 0;
         }
     }
 }
 
-.form-horizontal .form-group{
-margin-right: -15px;
-margin-left: 0px;
+input{
+    &[type="file"]{
+        background-color: $hover-green;
+    }
+    
+}
+
+#file-upload{
+    opacity: 0;
 }
 
