@@ -30,14 +30,14 @@ namespace BestFriendFinder2.Controllers
             //{
             //    attributes.Add(item.Selection);
             //}
-            if (User.Identity.IsAuthenticated)
-            {
-                string userID = User.Identity.GetUserId();
-                var user = db.Users.Where(u => u.Id == userID).FirstOrDefault();
-                var customer = db.Customers.Where(s => s.UserID == user.Id).FirstOrDefault();
-                customer.Attributes = attributes;
-                db.SaveChanges();
-            }
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    string userID = User.Identity.GetUserId();
+            //    var user = db.Users.Where(u => u.Id == userID).FirstOrDefault();
+            //    var customer = db.Customers.Where(s => s.UserID == user.Id).FirstOrDefault();
+            //    customer.Attributes = attributes;
+            //    db.SaveChanges();
+            //}
             return RedirectToAction("PostQuiz", "Customers", attributes);
         }
 

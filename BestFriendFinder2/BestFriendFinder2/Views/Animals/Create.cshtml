@@ -68,12 +68,12 @@
         </div>
         <div class="col-md-4">
             <h4><strong>Upload a .CSV to create multiple profiles</strong></h4>
-            @using (Html.BeginForm("Create", "Animals", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            @using (Html.BeginForm("CreateFromCSV", "Animals", FormMethod.Post, new { enctype = "multipart/form-data" }))
             {
                 <label for="file-upload" class="btn btn-default">
                     Choose File
                 </label>
-                <input id="file-upload" type="file" /><br>
+                <input id="file-upload" type="file" name="postedFile" /><br>
 
                 <input type="submit" value="Import" class="btn btn-default" style="margin-top: 15px;"/>
             }

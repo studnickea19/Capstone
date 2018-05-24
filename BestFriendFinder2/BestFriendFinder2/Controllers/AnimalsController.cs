@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BestFriendFinder2.Models;
+using System.IO;
+using Microsoft.AspNet.Identity;
 
 namespace BestFriendFinder2.Controllers
 {
@@ -59,6 +61,50 @@ namespace BestFriendFinder2.Controllers
 
             ViewBag.HumaneSocietyID = new SelectList(db.HumaneSocieties, "Id", "Name", animal.HumaneSocietyID);
             return View(animal);
+        }
+
+        [HttpPost]
+        public ActionResult CreateFromCSV([Bind(Include = "Id,Name,Breed,Neutered,Age,HumaneSocietyID")]HttpPostedFileBase postedFile)
+        {
+            List<Animal> animals = new List<Animal>();
+            string filePath = string.Empty;
+            if (postedFile != null)
+            {
+                string path = Server.MapPath("~/Uploads/");
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+
+                filePath = path + Path.GetFileName(postedFile.FileName);
+                string extension = Path.GetExtension(postedFile.FileName);
+                postedFile.SaveAs(filePath);
+
+                //Read the contents of CSV file.
+                string csvData = System.IO.File.ReadAllText(filePath);
+                
+                //Execute a loop over the rows.
+                string userID = User.Identity.GetUserId();  //get current userID
+                var user = db.Users.Where(u => u.Id == userID).FirstOrDefault();    //get user 
+                var hs  = db.HumaneSocieties.Where(h => h.UserID == user.Id).FirstOrDefault();
+                foreach (string row in csvData.Split('\n'))
+                {
+                    if (!string.IsNullOrEmpty(row))
+                    {
+                        db.Animals.Add(new Animal
+                        {
+                            Name = row.Split(',')[1],
+                            Breed = row.Split(',')[2],
+                            Neutered = Convert.ToBoolean(row.Split(',')[3]),
+                            Age = Convert.ToInt32(row.Split(',')[4]),
+                            HumaneSocietyID = hs.Id                            
+                        });
+                        db.SaveChanges();
+                    }
+                }
+            }
+
+            return RedirectToAction("Index","Animals");
         }
 
         // GET: Animals/Edit/5

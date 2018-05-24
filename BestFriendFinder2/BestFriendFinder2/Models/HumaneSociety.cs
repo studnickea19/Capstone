@@ -28,5 +28,7 @@ namespace BestFriendFinder2.Models
                 return StreetAddress + " " + City + ", " + State + " " + Zipcode;
             }
         }
+
+        public string UserID { get; set; }
     }
 }

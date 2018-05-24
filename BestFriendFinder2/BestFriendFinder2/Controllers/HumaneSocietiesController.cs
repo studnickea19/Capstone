@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BestFriendFinder2.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BestFriendFinder2.Controllers
 {
@@ -50,6 +51,7 @@ namespace BestFriendFinder2.Controllers
         {
             if (ModelState.IsValid)
             {
+                humaneSociety.UserID = User.Identity.GetUserId();
                 db.HumaneSocieties.Add(humaneSociety);
                 db.SaveChanges();
                 return RedirectToAction("Index");

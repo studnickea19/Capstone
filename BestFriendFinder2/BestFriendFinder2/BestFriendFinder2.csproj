@@ -230,6 +230,10 @@
     <Compile Include="Migrations\201805231510052_AddedAttributeToBreed.Designer.cs">
       <DependentUpon>201805231510052_AddedAttributeToBreed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805241514596_AddedUserIDToHumaneSocietyModel.cs" />
+    <Compile Include="Migrations\201805241514596_AddedUserIDToHumaneSocietyModel.Designer.cs">
+      <DependentUpon>201805241514596_AddedUserIDToHumaneSocietyModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Animal.cs" />
@@ -391,6 +395,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Uploads\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -415,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805231510052_AddedAttributeToBreed.resx">
       <DependentUpon>201805231510052_AddedAttributeToBreed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805241514596_AddedUserIDToHumaneSocietyModel.resx">
+      <DependentUpon>201805241514596_AddedUserIDToHumaneSocietyModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
