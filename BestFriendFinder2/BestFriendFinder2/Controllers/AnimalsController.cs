@@ -19,7 +19,18 @@ namespace BestFriendFinder2.Controllers
         // GET: Animals
         public ActionResult Index()
         {
-            var animals = db.Animals.Include(a => a.HumaneSociety);
+            List<Animal> animals = new List<Animal>();
+            if (User.IsInRole("Humane Society"))
+            {
+                string userID = User.Identity.GetUserId();
+                var user = db.Users.Where(u => u.Id == userID).FirstOrDefault();    //get user 
+                var hs = db.HumaneSocieties.Where(s => s.UserID == user.Id).FirstOrDefault();
+                animals = db.Animals.Where(a => a.HumaneSocietyID == hs.Id).ToList();
+            }
+            else
+            {
+                animals = db.Animals.Include(a => a.HumaneSociety).ToList();
+            }            
             return View(animals.ToList());
         }
 
