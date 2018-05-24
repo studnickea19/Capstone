@@ -86,3 +86,4 @@ C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.Migrations.AddedAttributesToBreedModel.resources
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.Migrations.AddedAttributeToBreed.resources
 C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.Migrations.AddedUserIDToHumaneSocietyModel.resources
+C:\Users\Ellie\Documents\CAPSTONE\BestFriendFinder2\BestFriendFinder2\obj\Debug\BestFriendFinder2.csprojResolveAssemblyReference.cache

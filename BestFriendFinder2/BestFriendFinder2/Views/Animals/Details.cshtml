@@ -6,54 +6,95 @@
 }
 
 <h2>Details</h2>
+@if (User.IsInRole("Humane Society"))
+{
+    <div>
+        <h4>@Html.DisplayFor(model => model.Name)</h4>
+        <hr />
+        <dl class="dl-horizontal">
 
-<div>
-    <h4>Animal</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.HumaneSociety.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Breed)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.HumaneSociety.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Breed)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Neutered)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Neutered)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Breed)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Breed)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Neutered)
-        </dt>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
 
-        <dd>
-            @Html.DisplayFor(model => model.Neutered)
-        </dd>
+else
+{
+    <div>
+        <h4>@Html.DisplayFor(model => model.Name)</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Location
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Age)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.HumaneSociety.Name)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Age)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Breed)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Breed)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Neutered)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Neutered)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Age)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Age)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
