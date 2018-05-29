@@ -108,12 +108,21 @@ div{
     .form-group{
         padding-bottom: 10px;
     }
+    .container{
+        .row{
+            .col-md-6{
+                .img-wrapper{
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
 }
 
-/*label{
-    margin: 2px 0 1px 0;
-    padding: 2px 0 1px 0;
-    .col-md-2{
-        min-height: 10px;
+img{
+    .allegra{
+        height: 100px;
+        width: auto;
+        border-radius: 6px;
     }
-}*/
+}
