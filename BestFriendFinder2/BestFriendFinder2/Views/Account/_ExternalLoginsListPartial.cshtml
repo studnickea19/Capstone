@@ -1,16 +1,16 @@
 ﻿@model BestFriendFinder2.Models.ExternalLoginListViewModel
 @using Microsoft.Owin.Security
 
-<h4>Use another service to log in.</h4>
+<h4>Log in with Social Media.</h4>
 <hr />
 @{
     var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
     if (loginProviders.Count() == 0) {
-        <div>
+        @*<div>
             <p>
                 There are currently no external login services.
             </p>
-        </div>
+        </div>*@
     }
     else {
         using (Html.BeginForm("ExternalLogin", "Account", new { ReturnUrl = Model.ReturnUrl })) {

@@ -58,11 +58,11 @@ namespace BestFriendFinder2
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "908373832957-ko2s2klogti4gkf5r2bhhmgqbutu9vm1.apps.googleusercontent.com",
+                ClientSecret = "GgLxfle9cXZ_QL3TBGtD5z89"
+            });
         }
     }
 }

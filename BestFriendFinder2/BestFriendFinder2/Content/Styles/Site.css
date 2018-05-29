@@ -69,9 +69,24 @@ a {
 .container .row input {
   position: absolute; }
 
-input[type="file"] {
-  background-color: #13997e; }
+input {
+  margin: 1px 0 1px 0; }
+  input[type="file"] {
+    background-color: #13997e; }
+  input .form-control {
+    margin: 1px 0 1px 0; }
 
 #file-upload {
   opacity: 0; }
+
+div .form-group {
+  padding-bottom: 10px; }
+
+/*label{
+    margin: 2px 0 1px 0;
+    padding: 2px 0 1px 0;
+    .col-md-2{
+        min-height: 10px;
+    }
+}*/
 
